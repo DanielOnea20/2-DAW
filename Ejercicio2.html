@@ -2,12 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <p>Ecribe tu opinion sobre la receta de cocina <a href="#" onclick="opinion()">Escribe aqui</a></p>
-    <p id="opinion"></p>
+    <form id="formulario">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" onblur="verificarNombre()"><br><br>
+        
+        <label for="apellido1">Apellido 1:</label>
+        <input type="text" id="apellido1" onblur="verificarApellido1()"><br><br>
+        
+        <label for="apellido2">Apellido 2:</label>
+        <input type="text" id="apellido2" onblur="verificarApellido2()"><br><br>
+        
+        <label for="date">Fecha de Nacimiento: </label>
+        <input type="text" id="date" onblur="verificarFecha() "onblur="verificarSiEsMayorDeEdad()"><br><br>
+
+        <label for="estudios">Estudios:</label>
+            <select name="estudios" id="estudios"> 
+                <option value="grado">Grado</option>
+                <option value="doctorado">Doctorado</option>
+                <option value="libre">Libre</option>
+            </select><br><br>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" onblur="verificarTelefono()"><br><br>
+                
+        <label for="curso">Curso: </label>
+        <select id="curso" name="curso"></select><br><br>
+        
+        <input type="submit" id="buttonForm" value="Registrar" disabled></input>
+    </form>
+
+    <div id="windowModal" class="modal">
+        <div class="contentWindowModal">
+            <span class="closeWindowModal"></span>
+            <p>Verifica todos los datos que has introducido</p>
+        </div>
+    </div>
+
     <script src="Ejercicio2.js"></script>
 </body>
 </html>

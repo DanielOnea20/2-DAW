@@ -1,11 +1,18 @@
-const enlaces = document.querySelectorAll('a');
-const numeroDeEnlaces = enlaces.length;
-console.log("Los enlaces que tiene la pagina son: " + numeroDeEnlaces);
+class Alumno{
+    constructor(nombre,apellido1,apellido2,fechaNacimiento,estudios,curso,telefono){
+        this.nombre = nombre;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.fechaNacimiento = fechaNacimiento;
+        this.estudios = estudios;
+        this.curso = curso;
+        this.telefono = telefono;
+    }
 
-const enlaceFinal = enlaces[enlaces.length -1].href;
-console.log("El ultimo enlace es " + enlaceFinal);
+    muestra(){
+        console.log("Nombre: " + this.nombre + "\n" + "Apellido 1: " + this.apellido1 + "\n" + "Apellido2: " + this.apellido2 + "\n" + "Fecha nacimiento: " + this.fechaNacimiento + "\n" + "Estudios: " + this.estudios + "\n" + "Curso: " + this.curso + "\n" + "Telefono: " + this.telefono);
+    }
+}
 
-const parrafoUno = document.getElementById('primerParrafo');
-const numeroDeEnlacesPrimerParrafo = parrafoUno.querySelectorAll('a');
-const todosLosEnlacesPrimerParrafo = numeroDeEnlacesPrimerParrafo.length;
-console.log("Los enlaces que tiene el primer parrafo son: " + todosLosEnlacesPrimerParrafo);
+const alumno = new Alumno("Daniel", "Onea", "Dragnoiu", '12/02/2000', "ESO", 2, 123456789);
+alumno.muestra();

@@ -1,36 +1,50 @@
-function formularioCorrecto() {
-    const dni = document.getElementById("dni").value;
-    const email = document.getElementById("email").value;
-    const dniPattern = /^\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/;
+let posicionInicial = null;
+let posicionFinal = null;
+const foto = document.getElementById('foto-vallejo');
 
-    if(!dni){
-        alert("Completa el campo DNI");
-        return false;
-    }
+document.addEventListener('click', function(event) {
+    event.preventDefault();
 
-    if(!dniPattern.test(dni)){
-        alert("Teclea un DNI");
-        return false;
+    const x = event.clientX;
+    const y = event.clientY;
+
+    if (posicionInicial === null) {
+        posicionInicial = { x, y };
+        console.log("Primera posición:", posicionInicial);
+    } else if (posicionFinal === null) {
+        posicionFinal = { x, y };
+        console.log("Segunda posición:", posicionFinal);
+    } else {
+        posicionInicial = { x, y };
+        posicionFinal = null;
     }
     
-    const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
-    const numeroDni = dni.slice(0, 8);
-    const resto = numeroDni % 23;
-    const letra = letras[resto];
-
-    if(dni[8] !== letra) {
-        alert("La letra del NIF es incorrecta.");
-        return false;
-    } else {
-        alert("DNI correcto");
-    }
+    foto.addEventListener('click', function() {
+        if (posicionInicial && posicionFinal) {
+            movimiento(foto, posicionInicial, posicionFinal, 1000);
+        }
+    });
     
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (emailPattern.test(email)) {
-        alert("El correo electrónico es válido");
-        return true;
-    } else {
-        alert("El correo electrónico no es válido");
-        return false;
-    }
-}
+    function movimiento(element, inicio, fin, duration) {
+        const distanciaX = fin.x - inicio.x;
+        const distanciaY = fin.y - inicio.y;
+        const inicioTiempo = performance.now();
+    
+        function mover(timestamp) {
+            const tiempoTranscurrido = timestamp - inicioTiempo;
+            const progreso = Math.min(tiempoTranscurrido / duration, 1);
+    
+            const posicionX = inicio.x + distanciaX * progreso;
+            const posicionY = inicio.y + distanciaY * progreso;
+    
+            element.style.left = `${posicionX}px`;
+            element.style.top = `${posicionY}px`;
+    
+            if (progreso < 1) {
+                requestAnimationFrame(mover);
+            }
+        }
+    
+        requestAnimationFrame(mover);
+    } 
+});
