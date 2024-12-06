@@ -5,49 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-    </style>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <body>
     <header>
-        <img src="img/logo.jpg" alt="Logo del supermercado" class="photo-logo">
+        <img src="imagenes_practica_final/logo_peq.png" alt="Photo header" id="photo-header">
+        <p class="header-text">Daniel Onea</p>
+
         <div class="menu">
             <ul class="button">
-                <li><a href="index.html" class="active" title="INICIO"><b>INICIO</b></a></li>
-                <li><a href="productos.html" title="PRODUCTOS"><b>PRODUCTOS</b></a></li>
-                <li><a href="compra.html" title="COMPRA"><b>COMPRA</b></a></li>
+                <li><a href="index.html"><span class="style-italic" title="Inicio"><b>Inicio</b></span></a></li>
+                <li><a href="diseño.html"><span class="style-italic" title="Diseño gráfico"><b>Diseño gráfico</b></span></a></li>
+                <li><a href="inspiracion.html"><span class="style-italic" title="Inspiración"><b>Inspiración</b></span></a></li>
+                <li><a href="#"><span class="style-italic" title="Sobre mí"><b>Sobre mí</b></span></a></li>
+                <li><a href="contactar.html"><span class="style-italic" title="Contactar"><b>Contactar</b></span></a></li>
             </ul>
         </div>
+
+        <hr class="linea-horizontal">
+
+        <img src="imagenes_practica_final/cabecera1.jpg" alt="Photo header2" id="photo-header2">
+        <img src="imagenes_practica_final/logo.png" alt="Photo header3" id="photo-header3">
+
+        <p class="header-text2"><b>Portafolio personal de Daniel Onea</b></p>
+
+        <p class="header-text3"><b>Diseñador multimedia</b></p>
     </header>
-        
+
     <div class="web">
-        <div>
-            <img src="img/comida.jpg" alt="" class="photo-index">
-            <p class="photo-index-text">Nuestro supermercado se especializa en comida sana</p>
+        <h1 class="index-title">Sobre mi</h1>
+        <p class="index-text">Soy Daniel Onea, diseñador multimedia.</p>
+        <p class="index-text2">Quiero mostrarte mi portafolios personal y profesional sobre los temas que me apasionan: infografía, fotografía, creatividad, arte, moda, diseño web.... Lo que más me gusta es compartir mi experiencia y que me comentes que te parece mi trabajo.</p>
+        <p class="index-text3">Si quieres saber más sobre mí, puedes seguir leyendo <a href="#" class="link-index-text3"><b>aquí...Sobre mi</b></a></p>
+
+        <ul class="redes-sociales-menu">
+            <li class="redes-sociales-icon" id="facebook"></li>
+            <li class="redes-sociales-icon" id="email"></li>
+            <li class="redes-sociales-icon" id="google"></li>
+            <li class="redes-sociales-icon" id="twitter"></li>
+            <li class="redes-sociales-icon" id="linkedin"></li>
+            <li class="redes-sociales-icon" id="github"></li>
+        </ul>
+
+        <h2 class="index-title2">Mi portafolio</h2>
+
+        <div class="photo-index1">
+            <img src="imagenes_practica_final/galeria/galeria_1.jpg" alt="Foto 1" class="photo-index1-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
         </div>
 
-        <div class="index-text">
-            <h1 class="title-index">¡Bienvenidos a nuestro Super online!</h1>
-            <p>Comer sano no significa limitaciones estrictas, mantenerse delgado a toda coste o privarse de comer aquello que realmente nos gusta. Comer sano está relacionado con sentirse mejor, tener más energía y mejorar nuestra salud.</p>
-
-            <p class="subtitle-index">Algunos fundamentos de la comida sana <span class="style-italic">(healthy food)</span></p>
-
-            <ul>
-                <li>Las <b>proteínas</b> te dan energía y son necesarias en su justa medida. Pero no todas deben venir de una fuente animal, hay muchas alternativas vegetales.</li>
-                <li>No todas las <b>grasas</b> son iguales. Mientras las grasas malas aumentan los riesgos de ciertas enfermedades, las saludables (como el <b>Omega-3</b> son vitales para tu salud física y emocional).</li>
-                <li>Tomar alimentos ricos en <b>fibra</b> mejora tu regularidad y reduce el riesgo de enfermedades cardiovaculares y diabetes.</li>
-                <li>Una dieta sin suficiente <b>calcio</b>, además de favorecer la osteoporosis, puede contribuir a la ansiedad y a la falta de sueño.</li>
-                <li>Los <b>carbohidratos</b> son otra de nuestras fuentes principales de energía. Pero es mejor tomarlos de alimento sin refinar (granos integrales, fruta, verdura) que de alimentos procesados (ricos en azúcar)</li>
-            </ul>
-            <p class="subtitle2-index">Precios</p>
-            <p class="subtitle2-index-text">Como podrás comprobar si haces un pedido en nuestro supermercado, <b>comer sano no significa comer caro</b></p>
+        <div class="photo-index2">
+            <img src="imagenes_practica_final/galeria/galeria_2.jpg" alt="Foto 2" class="photo-index2-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
         </div>
+
+        <div class="photo-index3">
+            <img src="imagenes_practica_final/galeria/galeria_3.jpg" alt="Foto 3" class="photo-index3-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index4">
+            <img src="imagenes_practica_final/galeria/galeria_4.jpg" alt="Foto 4" class="photo-index4-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index5">
+            <img src="imagenes_practica_final/galeria/galeria_5.jpg" alt="Foto 5" class="photo-index5-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index6">
+            <img src="imagenes_practica_final/galeria/galeria_6.jpg" alt="Foto 6" class="photo-index6-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index7">
+            <img src="imagenes_practica_final/galeria/galeria_7.jpg" alt="Foto 7" class="photo-index7-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index8">
+            <img src="imagenes_practica_final/galeria/galeria_8.jpg" alt="Foto 8" class="photo-index8-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index9">
+            <img src="imagenes_practica_final/galeria/galeria_9.jpg" alt="Foto 9" class="photo-index9-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index10">
+            <img src="imagenes_practica_final/galeria/galeria_10.jpg" alt="Foto 10" class="photo-index10-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index11">
+            <img src="imagenes_practica_final/galeria/galeria_11.jpg" alt="Foto 11" class="photo-index11-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+
+        <div class="photo-index12">
+            <img src="imagenes_practica_final/galeria/galeria_12.jpg" alt="Foto 12" class="photo-index12-1">
+            <p class="index-text4">Comentario de la imagen</p>
+            <a href="#" class="link-photo-index"><b>Ampliar información...</b></a>
+        </div>
+        
     </div>
 
-    <footer>
-        <p class="footer-text1">PEC3 Lenguajes y estándares web, 2020. <b>Daniel Onea</b></p>
-        <p class="footer-text2">Créditos: Vector de Logo creado por freepik - <a href="www.freepik.es">www.freepik.es</a></p>
+    <footer class="footer">
+        <div class="links1-footer">
+            <a href="diseño.html" class="link-footer"><b>Diseño gráfico</b></a><br>
+            <a href="inspiracion.html" class="link-footer2"><b>Inspiración</b></a><br>
+            <a href="#" class="link-footer3"><b>Sobre mí</b></a><br>
+            <a href="contactar.html" class="link-footer4"><b>CONTACTAR</b></a>
+        </div>
+        <div class="links2-footer">
+            <a href="#" class="link-footer5"><b>Política de cookies</b></a><br>
+            <a href="#" class="link-footer6"><b>Aviso legal</b></a><br>
+            <a href="#" class="link-footer7"><b>Mapa del sitio</b></a><br>
+            <a href="index.html" class="link-footer8"><b>Ir al comienzo</b></a><br>
+        </div>
+        <p class="index-text5">Todas las imágenes son procedentes de bancos de imágenes de libre distribución</p>
     </footer>
 </body>
 </html>
