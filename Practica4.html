@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Creador de Jugadores</h1>
+    <div class="formulario">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" onblur="validarNombre()"><br><br>
+        <span id="errorNombre"></span><br><br>
+
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" id="apellidos" onblur="validarApellidos()"><br><br>
+        <span id="errorApellidos"></span><br><br>
+
+        <label for="apodo">Apodo: </label>
+        <input type="text" id="apodo" onblur="validarApodo()"><br><br>
+        <span id="errorApodo"></span><br><br>
+
+        <label for="posicion">Posicion: </label>
+        <select id="posicion">
+            <option value="Portero">Portero</option>
+            <option value="Defensa">Defensa</option>
+            <option value="Centrocampista">Centrocampista</option>
+            <option value="Delantero">Delantero</option>
+        </select>
+        <br><br><br><br>
+
+        <label for="mejorHabilidad">Mejor habilidad: </label>
+        <input type="text" id="mejorHabilidad" onblur="validarMejorHabilidad()"><br><br>
+        <span id="errorMejorHabilidad"></span><br><br>
+
+        <label for="peorHabilidad">Peor habilidad: </label>
+        <input type="text" id="peorHabilidad" onblur="validarPeorHabilidad()"><br><br>
+        <span id="errorPeorHabilidad"></span><br><br>
+        
+        <button id="boton" onclick="crearJugador()" disabled>Crear Jugador</button>
+    </div>
+
+    <div class="photos">
+        <img src="Fotos/Foto CR7.jpg" alt="Cristiano Ronaldo" id="photo-cr7">
+        <img src="Fotos/Foto Messi.jpg" alt="Lionel Messi" id="photo-messi">
+        <img src="Fotos/Foto Neymar.jpg" alt="Neymar" id="photo-neymar">
+        <img src="Fotos/Foto Mbappe.jpg" alt="Kylian Mbappe" id="photo-mbappe">
+        <img src="Fotos/Foto Vinicius.jpg" alt="Vinicius" id="photo-vinicius">
+        <img src="Fotos/Foto Haaland.jpg" alt="Haaland" id="photo-haaland">
+        <img src="Fotos/Foto Bellingham.jpg" alt="Jude Bellingham" id="photo-bellingham">
+        <img src="Fotos/Foto Carvajal.jpg" alt="Daniel Carvajal" id="photo-carvajal">
+    </div>
+
+    <p id="mensajeNuevoJugador"></p>
+    <p id="listaJugadores"></p>
+
+    <script src="Practica4.js"></script>
+</body>
+</html>
